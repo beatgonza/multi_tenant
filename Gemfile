@@ -8,6 +8,7 @@ gem 'formtastic', '~> 2.0.0'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'devise'
+gem 'activeadmin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
