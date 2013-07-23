@@ -1,9 +1,9 @@
 ActiveAdmin.register User do
-  # controller do
-  #   def scoped_collection
-  #     User.unscoped
-  #   end
-  # end
+  controller do
+    def scoped_collection
+      User.unscoped
+    end
+  end
 
   index do
     column :id

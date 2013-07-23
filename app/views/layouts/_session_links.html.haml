@@ -3,12 +3,19 @@
     %ul#user_nav.nav.nav-tabs
       %li.pull-left= link_to "Home", "/"
       - if user_signed_in?
-        %li
+        %li.pull-right.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Accounts
+            %b.caret
+          %ul.dropdown-menu
+            - @accounts.each do |a|
+              %li= link_to a.name, root_url(subdomain: a.subdomain)
+        %li.pull-right
           %span= "Signed in as #{current_user.email}"
-        %li
+        %li.pull-right
           = link_to "Sign out", destroy_user_session_path, :method => :delete
       - else
-        %li
+        %li.pull-right
           = link_to "Sign up", new_user_registration_path
-        %li
+        %li.pull-right
           = link_to "Sign in", new_user_session_path

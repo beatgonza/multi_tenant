@@ -1,1 +1,12 @@
-%h1= current_account.name
+.well
+  - if current_account
+    %h1= current_account.name
+  - else
+    %h1= "RacePoint Group"
+
+- if current_account
+  %h3= "Users on this account:"
+
+  %ul
+    - @users.each do |u|
+      %li= u.email

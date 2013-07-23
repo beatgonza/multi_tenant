@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-MultiTenant::Application.config.session_store :cookie_store, key: '_multi_tenant_session'
+MultiTenant::Application.config.session_store :cookie_store, key: '_multi_tenant_session', domain: ".multi_tenant.dev"
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

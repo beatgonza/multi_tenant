@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :accounts
 
-  default_scope { User.joins(:accounts).where(accounts: {id: Account.current_id}) if Account.current_id }
+  default_scope { User.joins(:accounts).where(accounts: {id: Account.current_id}).readonly(false) if Account.current_id }
 
   attr_accessible :account_ids
 
