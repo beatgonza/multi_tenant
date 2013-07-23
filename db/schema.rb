@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722160532) do
+ActiveRecord::Schema.define(:version => 20130722194230) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20130722160532) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "accounts_users", :id => false, :force => true do |t|
+    t.integer "account_id"
+    t.integer "user_id"
+  end
+
+  add_index "accounts_users", ["account_id"], :name => "index_accounts_users_on_account_id"
+  add_index "accounts_users", ["user_id"], :name => "index_accounts_users_on_user_id"
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
