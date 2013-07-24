@@ -9,6 +9,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'activeadmin'
+gem 'heroku'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
