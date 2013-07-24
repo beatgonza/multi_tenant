@@ -19,10 +19,15 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'pry-rails'
   # gem 'pry-remote'
   gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :production do
