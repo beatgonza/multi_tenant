@@ -111,7 +111,8 @@ ActiveAdmin.setup do |config|
   #
   # config.before_filter :do_something_awesome
 
-
+  # skip_before_filter  :verify_authenticity_token
+  config.skip_before_filter  :verify_authenticity_token
   # == Register Stylesheets & Javascripts
   #
   # We recommend using the built in Active Admin layout and loading
