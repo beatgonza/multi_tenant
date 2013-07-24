@@ -3,6 +3,9 @@ class Account < ActiveRecord::Base
 
   has_and_belongs_to_many :users
 
+  validates :subdomain, :format => { :with => /\A\w+\z/ },
+                    	:presence => true
+
   def self.current_id=(id)
     Thread.current[:account_id] = id
   end
