@@ -5,7 +5,6 @@ class HomeController < ApplicationController
   def index
     @users = User.all
     @accounts = current_user.accounts
-    render "index"
   end
 
 end
