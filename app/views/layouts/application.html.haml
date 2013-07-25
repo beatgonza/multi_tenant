@@ -6,6 +6,12 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+
+    - if flash.any?
+      .container.flash_messages
+        - flash.each do |name, message|
+          = content_tag :p, message, :class => "flash alert"
+
     = render "layouts/session_links"
     .container
       = yield
