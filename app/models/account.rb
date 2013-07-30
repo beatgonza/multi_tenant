@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  attr_accessible :name, :subdomain
+  attr_accessible :name, :subdomain, :logo
 
   has_and_belongs_to_many :users
 
@@ -7,6 +7,8 @@ class Account < ActiveRecord::Base
                     	 :presence => true,
                        :uniqueness => true
 
+  mount_uploader :logo, LogoUploader
+  
   def self.current_id=(id)
     Thread.current[:account_id] = id
   end

@@ -1,8 +1,11 @@
-.well
-  - if current_account
-    %h1= current_account.name
-  - else
-    %h1= "RacePoint Group"
+#main_header.well.clearfix
+  .pull-left
+    - if current_account
+      %h1= current_account.name
+    - else
+      %h1= "RacePoint Group"
+  .pull-right
+    = image_tag current_account.try(:logo).url, class: "img-rounded logo" if current_account.try(:logo).present?
 
 - if current_account
   %h3= "Users on this account:"
