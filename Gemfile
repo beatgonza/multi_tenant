@@ -15,6 +15,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 gem 'rails_config'
+gem 'jquery-minicolors-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

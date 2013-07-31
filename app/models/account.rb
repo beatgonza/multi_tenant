@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  attr_accessible :name, :subdomain, :logo
+  attr_accessible :name, :subdomain, :logo, :color
 
   has_and_belongs_to_many :users
 

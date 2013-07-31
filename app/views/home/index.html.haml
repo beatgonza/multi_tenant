@@ -1,4 +1,4 @@
-#main_header.well.clearfix
+#main_header.well.clearfix{style: "background-color: #{current_account.try(:color)}"}
   .pull-left
     - if current_account
       %h1= current_account.name

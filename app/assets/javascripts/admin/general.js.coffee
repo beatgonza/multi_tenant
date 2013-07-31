@@ -9,3 +9,5 @@ $ ->
         $container.find(".image_field").attr("src", e.target.result).show()
 
       reader.readAsDataURL input.files[0]
+
+  $(".minicolor").minicolors()
