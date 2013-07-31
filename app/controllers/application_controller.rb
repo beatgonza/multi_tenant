@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def current_account
     subdomain = request.subdomains.first
-    Account.find_by_subdomain! subdomain if (subdomain.present? && subdomain != "www")
+    Account.find_by_subdomain subdomain if (subdomain.present? && subdomain != "www")
   end
   helper_method :current_account
 
