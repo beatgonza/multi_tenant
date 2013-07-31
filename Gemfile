@@ -13,6 +13,8 @@ gem 'activeadmin'
 gem 'heroku'
 gem 'carrierwave'
 gem 'fog'
+gem 'mini_magick'
+gem 'rails_config'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

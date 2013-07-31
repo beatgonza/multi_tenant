@@ -5,9 +5,10 @@
 
     - image = f.object
 
-    %li
-      = label_tag("Selected image")
-      = image_tag(image.logo.url, class: "image_field #{'hide' if image.new_record?}") rescue nil
+    - if image.logo.present? || image.new_record?
+      %li
+        = label_tag("Selected image")
+        = image_tag(image.logo.url, class: "image_field #{'hide' if image.new_record? }") rescue nil
 
     = f.input :logo, label: "New logo", value: image.logo.url, :input_html => {class: "image_uploader"}
 
